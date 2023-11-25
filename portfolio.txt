@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HARSHITHA KN- Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            text-align: center;
+            background-color:white ;
+            padding: 10px;
+        }
+
+        nav a {
+            margin: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 10px;
+            background-color: white;
+            margin: 50px ;
+            border-radius: 50px;
+        }
+
+#about {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px 0;
+    border-radius: 10px;
+}
+#about p {
+            font-size: 20px; /* Adjust the font size according to your preference */
+        }
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+        img {
+            max-width: 600px;
+            height: auto;
+            border-radius: 80%;
+            margin-bottom: 50px;
+        }
+ .social-icons {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .icon {
+            width: 40px;
+            height: auto;
+            margin-right: 10px; /* Adjust as needed to control spacing between icons */
+        }
+.html-logo,
+        .css-logo,
+        .javascript-logo,
+        .android-logo,
+        .kotlin-logo {
+            max-width: 40px; /* Adjust size for logos */
+        }
+ .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Align items horizontally */
+        }
+
+        .about-text {
+            max-width: 600px; /* Limit the width of the text */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+ .logo-container .icon {
+            margin-right: 20px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .contact-button,
+        .resume-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-right: 10px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .resume-button {
+            background-color: #28a745;
+        }
+        .skills, .projects, .resume, .contact me {
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 50%;
+            height: 300px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color:white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+.type{
+  width: 300%;
+            height: 500px;
+            border-radius: 50px;
+            margin-bottom: 50px;
+}
+ .what-i-do-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .what-i-do-item {
+            text-align: left;
+        }
+
+        .what-i-do-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+.proficiency-bar {
+        height: 10px;
+        background-color: #007bff; /* Adjust color as needed */
+        margin-top: 5px;
+    }
+
+    /* Adjust spacing and layout as needed */
+    .skill,
+    .proficiency-item {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .skill img,
+    .proficiency-icon {
+        max-width: 50px;
+        height: auto;
+        margin-right: 20px;
+    }
+
+    .skill-description,
+    .proficiency-details {
+        flex: 1;
+    }
+    .skill img {
+        max-width: 50px;
+        height: auto;
+        margin-right: 20px;
+    }
+
+    .skill-description,
+    .proficiency-item {
+        flex: 1;
+    }
+  .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .description {
+        width: 40%; /* Adjust the width as needed */
+    }
+
+    .image {
+        width: 40%; /* Adjust the width as needed */
+    }
+
+    .web {
+        width: 100%; /* Adjust the width as needed */
+        height: auto;
+    }
+ .project-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .project {
+        flex: 1;
+        border: 1px solid #ddd; /* Add border for separation */
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0 10px;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ddd; /* Add border for separation */
+    }
+
+    .project-details {
+        padding: 10px;
+    }
+ .resume-button {
+        background-color:blue;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+       
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HARSHITHA KN</h1>
+        <p>Web Developer</p>
+    </header>
+
+    <nav>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact Me</a>
+    </nav>
+  <section id="about">
+        <h2>👋 Hi all, I'm HARSHITHA KN </h2>
+        <div class="about-content">
+
+      
+      <img src="photo.jpg" alt="Your Name">
+       
+        <p>
+                       A dedicated and passionate web developer currently pursuing a degree in Computer Science and Engineering. I find immense joy and fulfillment in bringing creative ideas to life through the power of coding.
+Join me on this exciting journey of continuous learning and creation as I navigate the ever-evolving landscape of web and mobile development. Let's build something amazing together! 💻✨ </p></div>
+ <div class="social-icons">
+            <a href="https://github.com/yourusername" target="_blank" title="GitHub">
+                <img src="github-logo.png" alt="GitHub" width="40" height="40">
+            </a>
+            <a href="https://www.linkedin.com/in/yourusername" target="_blank" title="LinkedIn">
+                <img src="linkedin-logo.png" alt="LinkedIn" width="40" height="40">
+            </a>
+            <a href="mailto:your.email@gmail.com" title="Gmail">
+                <img src="gmail-logo.png" alt="Gmail" width="40" height="40">
+            </a>
+            <a href="https://www.facebook.com/yourusername" target="_blank" title="Facebook">
+                <img src="facebook-logo.png" alt="Facebook" width="40" height="40">
+            </a>
+            <a href="https://twitter.com/yourusername" target="_blank" title="Twitter">
+                <img src="twitter-logo.png" alt="Twitter" width="40" height="40">
+            </a>
+        </div>
+ <div class="buttons">
+            <a href="#contact" class="contact-button">Contact Me</a>
+            <a href="resume.png" target="_blank" class="resume-button">Check My Resume</a>
+        </div>
+        </div>
+</section>   
+
+<section id="what-i-do">
+        <h2><u>What I Do</u></h2>
+        <div class="what-i-do-content">
+            <div class="what-i-do-item">
+
+                
+              
+<ul>
+                    <li> I specialize in crafting visually appealing and functional websites, employing cutting-edge technologies such as HTML, CSS, and JavaScript to deliver seamless user experiences. Additionally, I excel in the realm of mobile app development, leveraging my expertise in Java and Kotlin to create engaging and efficient Android applications.</li>
+                    <li>My commitment to staying abreast of industry trends ensures that the websites and apps I develop align with the latest standards and innovations.</li>
+                    <li> Whether it's web design or Android development, I am dedicated to bringing creative ideas to life through the power of coding.</li>
+                </ul>
+            </div>
+           <img src="design.jpeg" alt="Computer" class="type">
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+<div class="image">
+ <h2>Skills</h2>
+        <img src="web.jpeg" alt="Web Logo" class="web">
+    </div>
+         <div class="description">
+       
+
+        <div class="skill-item">
+            <h3>CSS</h3>
+            <ul>
+                <li>Designed and styled web pages using CSS</li>
+                <li>Ensured a responsive and visually appealing layout</li>
+                <li>Utilized CSS frameworks for efficient styling</li>
+            </ul>
+        </div>
+
+        <div class="skill-item">
+            <h3>HTML</h3>
+            <ul>
+                <li>Created the structure of web pages using HTML tags</li>
+                <li>Implemented semantic HTML for better accessibility</li>
+                <li>Optimized web content for search engines</li>
+            </ul>
+        </div>
+
+        <div class="skill-item">
+            <h3>JavaScript</h3>
+            <ul>
+                <li>Implemented interactive features and dynamic content</li>
+                <li>Utilized JavaScript frameworks for enhanced functionality</li>
+                <li>Optimized code for performance and browser compatibility</li>
+            </ul>
+        </div>
+    </div>
+
+    
+</section>
+
+  <!-- Proficiency Section -->
+    <section id="proficiency" class="proficiency">
+        <!-- Proficiency: CSS -->
+        <div class="proficiency-item">
+            <div class="proficiency-details">
+                <p>CSS</p>
+                <!-- Add proficiency bar (adjust width based on proficiency) -->
+                <div class="proficiency-bar" style="width: 80%;"></div>
+            </div>
+            <img src="css-logo.png" alt="CSS Proficiency" class="proficiency-icon">
+        </div>
+
+        <!-- Proficiency: HTML -->
+        <div class="proficiency-item">
+            <div class="proficiency-details">
+                <p>HTML</p>
+                <!-- Add proficiency bar (adjust width based on proficiency) -->
+                <div class="proficiency-bar" style="width: 90%;"></div>
+            </div>
+            <img src="html-logo.png" alt="HTML Proficiency" class="proficiency-icon">
+        </div>
+
+        <!-- Proficiency: JavaScript -->
+        <div class="proficiency-item">
+            <div class="proficiency-details">
+                <p>JavaScript</p>
+                <!-- Add proficiency bar (adjust width based on proficiency) -->
+                <div class="proficiency-bar" style="width: 75%;"></div>
+            </div>
+            <img src="javascript-logo.png" alt="JavaScript Proficiency" class="proficiency-icon">
+        </div>
+    </section>
+
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+
+    <div class="project-row">
+        <!-- Project 1 -->
+        <div class="project">
+           
+            <div class="project-details">
+                <h3>Landing page</h3>
+                <p>landing page project:
+<ul>
+
+<li>Created a visually appealing landing page design that captures user attention and promotes a positive first impression.</li>
+<li>
+Incorporated a harmonious color scheme, engaging graphics, and carefully chosen typography to enhance the overall aesthetics.</li></p>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+            
+            <div class="project-details">
+                <h3>Functional Calculator Logic:
+</h3>
+                <p><ul>
+<li>Developed a fully functional calculator with support for basic arithmetic operations such as addition, subtraction, multiplication, and division.</li>
+<li>Implemented robust logic to handle user inputs, ensuring accurate calculations and providing a reliable tool for mathematical tasks..</li></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-row">
+        <!-- Project 3 -->
+        <div class="project">
+            <div class="project-details">
+                <h3>Data science</h3>
+                <p><ul><li>Conducted predictive analysis using machine learning algorithms to extract meaningful insights from a given dataset.</li>
+<li>Implemented algorithms such as regression or classification to make predictions based on historical data, contributing to informed decision-making..</li></p>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project">
+          
+            <div class="project-details">
+                <h3>Android app development</h3>
+                <p><ul><li>Developed an Android application focused on efficient task management, providing users with a user-friendly interface to create, organize, and prioritize tasks.</li>
+<li>Implemented features such as task categorization, due dates, and reminders, enhancing user productivity and organization..</li></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   
+
+    <section id="certificates" class="gallery">
+        <h2>Certificates</h2>
+        <img src="certificate1.png" alt="Certificate 1">
+        <img src="certificate2.jpeg" alt="Certificate 2">
+        <img src="certificate3.png" alt="Certificate 3">
+        <img src="certificate4.jpeg" alt="Certificate 4">
+        <!-- Add more certificate images as needed -->
+    </section>
+
+   <section id="resume" class="resume">
+    <h2>Resume</h2>
+    <p>Download my resume <a href="resume.png" target="_blank" download>here</a>.</p>
+    <button class="resume-button" onclick="window.open('resume.png', '_blank')">Check My Resume</button>
+</section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: harshitha25082003@email.com</p>
+        <p>Phone: 123456789</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 harshitha. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
