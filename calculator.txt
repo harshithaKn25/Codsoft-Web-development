@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            background-color: white;
+            color: blue;
+        }
+
+        #calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 8px;
+            max-width: 500px;
+            margin: auto;
+            padding: 50px;
+            border: 1px solid #34495e;
+            border-radius: 5px;
+            background-color: black;
+        }
+
+        input {
+            grid-column: span 4;
+            padding: 30px;
+            font-size: 30px;
+            text-align: right;
+            background-color: purple;
+            color: gold;
+            border: 1px solid pink;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            border: 5px solid pink;
+            border-radius: 3px;
+            background-color: purple;
+            color: gold;
+        }
+
+        button:hover {
+            background-color: white;
+        }
+    </style>
+    <title>Basic Calculator</title>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" id="display" readonly>
+       <button onclick="clearDisplay()">C</button>
+        <button onclick="appendNumber('/')">/</button>
+        <button onclick="setOperator('*')">*</button>
+        <button onclick="backspace()">⌫</button>
+        <button onclick="appendNumber('7')">7</button>
+        <button onclick="appendNumber('8')">8</button>
+        <button onclick="setOperator('9')">9</button>
+        <button onclick="setOperator('+')">+</button>
+        <button onclick="appendNumber('4')">4</button>
+        <button onclick="appendNumber('5')">5</button>
+        <button onclick="appendNumber('6')">6</button>
+        <button onclick="setOperator('-')">-</button>
+        <button onclick="appendNumber('1')">1</button>
+        <button onclick="appendNumber('2')">2</button>
+        <button onclick="appendNumber('3')">3</button>
+        <button onclick="appendNumber('0')">0</button>
+        <button onclick="appendCharacter('.')">.</button>
+        <button onclick="calculateResult()">=</button>
+        
+    </div>
+
+    <script>
+        let currentInput = '';
+        let previousInput = '';
+
+        function clearDisplay() {
+            currentInput = '';
+            previousInput = '';
+            updateDisplay();
+        }
+
+        function backspace() {
+            currentInput = currentInput.slice(0, -1);
+            updateDisplay();
+        }
+
+        function appendCharacter(char) {
+            currentInput += char;
+            updateDisplay();
+        }
+
+        function calculateResult() {
+            let result;
+            try {
+                result = eval(currentInput);
+                if (isNaN(result) || !isFinite(result)) {
+                    throw new Error('Invalid input');
+                }
+                currentInput = result.toString();
+                previousInput = '';
+                updateDisplay();
+            } catch (error) {
+                currentInput = 'Error';
+                updateDisplay();
+            }
+        }
+
+        function updateDisplay() {
+            document.getElementById('display').value = currentInput;
+        }
+
+        // Keyboard support
+        document.addEventListener('keydown', function(event) {
+            const key = event.key;
+            if (key >= '0' && key <= '9') {
+                appendCharacter(key);
+            } else if (key === '+' || key === '-' || key === '*' || key === '/') {
+                appendCharacter(key);
+            } else if (key === 'Enter') {
+                calculateResult();
+            } else if (key === 'Backspace') {
+                backspace();
+            }
+        });
+    </script>
+</body>
+</html>
